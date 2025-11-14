@@ -1,12 +1,384 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mio Sito</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruno Aguzzi - Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000000'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='900' font-family='Inter, Arial, sans-serif' text-anchor='middle' fill='%2325FF00'%3EBA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/stile.css">
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>Benvenuto nel mio sito!</p>
+
+  <!-- HEADER / NAVIGATION -->
+  <div class="container-fluid header-nav">
+    <div class="row pt-3 pb-3 align-items-center">
+      <!-- Logo Desktop -->
+      <div class="col-6 col-lg-3">
+        <a href="#" class="logo-text d-none d-lg-inline">Bruno Aguzzi</a>
+        <a href="#" class="logo-mobile d-inline d-lg-none">BA</a>
+      </div>
+      
+      <!-- Menu Desktop -->
+      <div class="col-lg-9 d-none d-lg-block">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#chi-sono" class="nav-link">Chi sono</a>
+          </li>
+          <li class="nav-item">
+            <a href="#passioni" class="nav-link">Passioni</a>
+          </li>
+          <li class="nav-item">
+            <a href="#territorio" class="nav-link">Territorio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#unirsm" class="nav-link">Unirsm Design</a>
+          </li>
+          <li class="nav-item">
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contatti" class="nav-link">Contatti</a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Hamburger Mobile -->
+      <div class="col-6 d-flex justify-content-end d-lg-none">
+        <button class="btn btn-menu">MENU</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENU MOBILE OVERLAY -->
+  <div class="mobile-nav-wrapper d-lg-none">
+    <button class="btn btn-close">CLOSE</button>
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="#chi-sono" class="nav-link">Chi sono</a>
+      </li>
+      <li class="nav-item">
+        <a href="#passioni" class="nav-link">Passioni</a>
+      </li>
+      <li class="nav-item">
+        <a href="#territorio" class="nav-link">Territorio</a>
+      </li>
+      <li class="nav-item">
+        <a href="#unirsm" class="nav-link">Unirsm Design</a>
+      </li>
+      <li class="nav-item">
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+      </li>
+      <li class="nav-item">
+        <a href="#contatti" class="nav-link">Contatti</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- HERO SECTION -->
+  <div class="hero-section" id="chi-sono" style="background-image: url('img/hero-bocca.jpg');">
+    <div class="container content-wrapper">
+      <div class="row py-5">
+        <div class="col-12 col-lg-8">
+          <h1 class="hero-title">Bruno<br>Aguzzi</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- BANDA BIANCA -->
+  <div class="banda-bianca"></div>
+
+    <!-- SEZIONE CHI SONO -->
+  <div class="chisono-section py-5" id="chi-sono">
+    <div class="container content-wrapper">
+      <div class="row mb-4">
+        <div class="col-12">
+          <h2 class="section-title">Chi sono</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-8 offset-lg-2">
+          <p class="chisono-text">
+            Bruno Aguzzi, 20 anni, designer della comunicazione visiva.
+          </p>
+          <p class="chisono-text">
+            Cresciuto a Fossombrone, nelle Marche, studio Design presso l'Università 
+            di San Marino. Mi occupo di progettazione grafica, branding e comunicazione 
+            digitale, con particolare attenzione alla tipografia e al design editoriale.
+          </p>
+          <p class="chisono-text">
+            La fotografia è parte del mio processo creativo: osservo paesaggi, situazioni, 
+            dettagli. Sport come il calcio e lo skateboard mi insegnano disciplina 
+            e sperimentazione, valori che porto nel design.
+          </p>
+         
+          <div class="text-center mt-5">
+            <a href="cv/Bruno_Aguzzi_CV.pdf" download class="btn-cv">Scarica CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- SEZIONE PASSIONI -->
+  <div class="passioni-section py-5" id="passioni" style="background-image: url('img/sfondo-passioni-cane.png');">
+    <div class="container content-wrapper">
+      <div class="row mb-5">
+        <div class="col-12">
+          <h2 class="passioni-title">Passioni</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <!-- Calcio -->
+        <div class="col-6 col-lg-3 mb-4">
+          <img src="img/passione-calcio.jpg" alt="Calcio" class="passione-img">
+          <p class="passione-label label-with-bg">Calcio</p>
+        </div>
+        
+        <!-- Skateboard -->
+        <div class="col-6 col-lg-3 mb-4">
+          <img src="img/passione-skateboard.jpg" alt="Skateboard" class="passione-img">
+          <p class="passione-label label-with-bg">Skateboard</p>
+        </div>
+        
+        <!-- Snowboard -->
+        <div class="col-6 col-lg-3 mb-4">
+          <img src="img/passione-snowboard.jpg" alt="Snowboard" class="passione-img">
+          <p class="passione-label label-with-bg">Snowboard</p>
+        </div>
+        
+        <!-- Foto -->
+        <div class="col-6 col-lg-3 mb-4">
+          <img src="img/passione-foto.jpg" alt="Fotografia" class="passione-img">
+          <p class="passione-label label-with-bg">Foto</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANDA BIANCA -->
+  <div class="banda-bianca"></div>
+
+  <!-- SEZIONE TERRITORIO -->
+<div class="territorio-section py-5" id="territorio" style="background-image: url('img/territorio-mappa.jpg');">
+  <div class="container content-wrapper">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="territorio-title">Territorio</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SEZIONE FOTO MARCHE -->
+<div class="foto-marche-section py-5">
+  <div class="container content-wrapper">
+    <div class="row">
+      <!-- Fossombrone -->
+      <div class="col-12 col-md-6 mb-4 mb-md-0">
+        <div class="foto-marche-item">
+          <img src="img/fossombrone.jpg" alt="Fossombrone" class="foto-marche">
+          <div class="foto-marche-overlay">
+            <p class="foto-marche-description">
+              Fossombrone, città d'arte nel cuore delle Marche. Il ponte romano attraversa il fiume Metauro, 
+              testimone di secoli di storia. Un luogo che unisce bellezza architettonica e paesaggio naturale, 
+              tra colline e tradizioni autentiche.
+            </p>
+          </div>
+          <p class="foto-caption">Fossombrone</p>
+        </div>
+      </div>
+      
+      <!-- Marche -->
+      <div class="col-12 col-md-6">
+        <div class="foto-marche-item">
+          <img src="img/marche.jpg" alt="Marche" class="foto-marche">
+          <div class="foto-marche-overlay">
+            <p class="foto-marche-description">
+              Le Marche, una regione sottovalutata ma straordinaria. Borghi medievali, colline che 
+              disegnano orizzonti perfetti, un mare che abbraccia l'Adriatico. Qui la cultura, l'arte 
+              e la natura convivono in equilibrio silenzioso, lontano dal turismo di massa.
+            </p>
+          </div>
+          <p class="foto-caption">Marche</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- BANDA BIANCA -->
+  <div class="banda-bianca"></div>
+
+<!-- SEZIONE UNIRSM DESIGN -->
+<div class="unirsm-section" id="unirsm">
+  <div class="row g-0 m-0">
+    <div class="col-12 col-lg-6 p-0 m-0">
+      <img src="img/unirsm-design.jpg" alt="Unirsm Design" class="unirsm-img">
+    </div>
+    <div class="col-12 col-lg-6 p-0 m-0">
+      <div class="unirsm-text-wrapper">
+        <h2 class="unirsm-title mb-4">Unirsm Design</h2>
+        <p class="unirsm-text">
+          Laboratorio di design della comunicazione presso l'Università degli Studi della Repubblica di San Marino. 
+          Un percorso formativo dedicato alla progettazione visiva, alla tipografia e alla comunicazione digitale.
+          Attraverso progetti concreti e collaborazioni con realtà del territorio, ho sviluppato competenze 
+          nella progettazione grafica, nel branding e nel design editoriale.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- BANDA BIANCA -->
+  <div class="banda-bianca"></div>
+
+  <!-- SEZIONE PORTFOLIO -->
+  <div class="portfolio-section py-5" id="portfolio" style="background-image: url('img/pattern-portfolio.png');">
+    <div class="container content-wrapper">
+      <div class="row mb-5">
+        <div class="col-12">
+          <h2 class="portfolio-title">Portfolio</h2>
+        </div>
+      </div>
+      
+      <div class="row">
+            <!-- Progetto 1 -->
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="portfolio-item">
+        <img src="img/portfolio-progetto1.jpg" alt="Sculture" class="portfolio-img">
+        <div class="portfolio-overlay">
+          <p class="portfolio-description">Corso di Geometria per il design - Prof. Ramin Razani. <br> Modellino in cartolegno sulle trasformazioni geometriche.</p>
+        </div>
+        <p class="portfolio-label">Sculture</p>
+      </div>
+    </div>
+
+    <!-- Progetto 2 -->
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="portfolio-item">
+        <img src="img/portfolio-progetto2.jpg" alt="Riqualificazione Urbana" class="portfolio-img">
+        <div class="portfolio-overlay">
+          <p class="portfolio-description">Laboratorio di Comunicazione - Prof. Ilaria Ruggeri. <br> Sedicesimo individuale di ricerca per ispirazione al progetto finale. Formato A4. </p>
+        </div>
+        <p class="portfolio-label">Riqualificazione Urbana</p>
+      </div>
+    </div>
+
+    <!-- Progetto 3 -->
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="portfolio-item">
+        <img src="img/portfolio-progetto3.jpg" alt="Bestiario" class="portfolio-img">
+        <div class="portfolio-overlay">
+          <p class="portfolio-description">Workshop Invernale di Serigrafia - Prof. Orsetta Rocchetto. <br> Serigrafia su carta di immagini di animali che, rilegati insieme e tagliati in corrispondenza delle zampe, si creavano forme di animali immaginari.</p>
+        </div>
+        <p class="portfolio-label">Bestiario</p>
+      </div>
+    </div>
+
+    <!-- Progetto 4 -->
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="portfolio-item">
+        <img src="img/portfolio-progetto4.jpg" alt="Hubstoria" class="portfolio-img">
+        <div class="portfolio-overlay">
+          <p class="portfolio-description">Laboratorio di Comunicazione - Prof. Ilaria Ruggeri. <br> Progettazione dell'identità visiva di un Hub, nei locali di un ex cinema di Rimini chiamato Astoria.</p>
+        </div>
+        <p class="portfolio-label">Hubstoria</p>
+      </div>
+    </div>
+
+    <!-- Progetto 5 -->
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="portfolio-item">
+        <img src="img/portfolio-progetto5.jpg" alt="Paraschiena 3D" class="portfolio-img">
+        <div class="portfolio-overlay">
+          <p class="portfolio-description">Modellazione Digitale 3D - Prof. Stefano Fariselli. <br> Progettazione di un paraschiena per uno sport a scelta degli studenti. La nostra è stata il kayak. Utilizzo di Rhino per la modellazione 3D.</p>
+        </div>
+        <p class="portfolio-label">Paraschiena 3D</p>
+      </div>
+    </div>
+
+    <!-- Progetto 6 -->
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="portfolio-item">
+        <img src="img/portfolio-progetto6.jpg" alt="HAHAHAT" class="portfolio-img">
+        <div class="portfolio-overlay">
+          <p class="portfolio-description">Laboratorio di Design del Prodotto - Edoardo Perri. <br> Progettazione di un copricapo interamente realizzato in cartone ondulato, per un 'eroe contemporaneo'. </p>
+        </div>
+        <p class="portfolio-label">HAHAHAT</p>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER / CONTATTI -->
+<div class="footer-section py-5" id="contatti">
+  <div class="container content-wrapper">
+    <div class="row">
+      <div class="col-12 mb-4">
+        <p class="footer-number">333333333333333333333333333</p>
+      </div>
+      <div class="col-12 mb-4">
+        <p class="footer-name">Bruno Aguzzi</p>
+      </div>
+      <div class="col-12">
+        <div class="footer-contacts">
+          <a href="mailto:aguzzibruno3@gmail.com" class="footer-link">aguzzibruno3@gmail.com</a>
+          <span class="footer-separator">|</span>
+          <a href="https://instagram.com/_bruno.aguzzi_" target="_blank" class="footer-link">@_bruno.aguzzi_</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- JAVASCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.querySelector('.btn-menu');
+      const closeButton = document.querySelector('.btn-close');
+      const mobileNav = document.querySelector('.mobile-nav-wrapper');
+      const navLinks = document.querySelectorAll('.mobile-nav-wrapper .nav-link');
+
+      const openMenu = () => {
+        mobileNav.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeMenu = () => {
+        mobileNav.classList.remove('show');
+        document.body.style.overflow = '';
+      };
+
+      if (menuButton) menuButton.addEventListener('click', openMenu);
+      if (closeButton) closeButton.addEventListener('click', closeMenu);
+
+      // Chiude il menu quando si clicca su un link
+      navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      // Chiude con ESC
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && mobileNav.classList.contains('show')) {
+          closeMenu();
+        }
+      });
+
+      // Chiude cliccando fuori
+      document.addEventListener('click', function(e) {
+        if (!mobileNav.classList.contains('show')) return;
+        if (!mobileNav.contains(e.target) && !menuButton.contains(e.target)) {
+          closeMenu();
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>

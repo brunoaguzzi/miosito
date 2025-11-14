@@ -1,0 +1,712 @@
+/* stile.css - Portfolio Bruno Aguzzi */
+
+/* Import Google Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+/* Reset base */
+html, body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Container personalizzato */
+.content-wrapper {
+    max-width: 1200px;
+}
+
+/* =================================
+   HEADER & NAVIGATION
+   ================================= */
+
+.header-nav {
+    background-color: #25FF00;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logo/Nome */
+.logo-text {
+    font-size: 24px;
+    font-weight: 900;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.logo-text:hover {
+    color: #000000;
+}
+
+/* Mobile logo */
+.logo-mobile {
+    font-size: 24px;
+    font-weight: 900;
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Lista di navigazione desktop */
+.nav-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-item {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 0;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    border-bottom: 3px solid #000000;
+    color: #000000;
+}
+
+/* Bottone hamburger */
+.btn-menu {
+    background: transparent;
+    border: 2px solid #000000;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 900;
+    color: #000000;
+}
+
+/* Menu mobile overlay */
+.mobile-nav-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #25FF00;
+    z-index: 1000;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    
+    /* Stato iniziale nascosto */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-nav-wrapper.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.mobile-nav-wrapper .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.mobile-nav-wrapper .nav-item {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.mobile-nav-wrapper.show .nav-item {
+    animation: fadeSlideIn 0.4s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ritardo progressivo animazione */
+.mobile-nav-wrapper.show .nav-item:nth-child(1) { animation-delay: 0.1s; }
+.mobile-nav-wrapper.show .nav-item:nth-child(2) { animation-delay: 0.2s; }
+.mobile-nav-wrapper.show .nav-item:nth-child(3) { animation-delay: 0.3s; }
+.mobile-nav-wrapper.show .nav-item:nth-child(4) { animation-delay: 0.4s; }
+.mobile-nav-wrapper.show .nav-item:nth-child(5) { animation-delay: 0.5s; }
+.mobile-nav-wrapper.show .nav-item:nth-child(6) { animation-delay: 0.6s; }
+
+.mobile-nav-wrapper .nav-link {
+    font-size: 32px;
+    font-weight: 900;
+    border-bottom: none;
+}
+
+.mobile-nav-wrapper .nav-link:hover {
+    border-bottom: none;
+    opacity: 0.7;
+}
+
+/* Bottone close */
+.btn-close {
+    background: transparent;
+    border: 2px solid #000000;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 900;
+    color: #000000;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* =================================
+   HERO SECTION
+   ================================= */
+
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 80px !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+    color: #25FF00 !important;
+    text-transform: uppercase !important;
+    letter-spacing: -3px !important;
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.hero-title::after {
+    display: none !important;
+    content: none !important;
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 0.9;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+/* =================================
+   SEZIONE CHI SONO
+   ================================= */
+
+.chisono-section {
+    background-color: #FFFFFF;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-bottom: 40px;
+}
+
+.chisono-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+/* Bottone CV */
+.btn-cv {
+    display: inline-block;
+    background-color: #25FF00;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    border: 3px solid #000000;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.btn-cv:hover {
+    background-color: #000000;
+    color: #25FF00;
+    border: 3px solid #25FF00;
+}
+
+/* =================================
+   SEZIONE PASSIONI
+   ================================= */
+
+.passioni-section {
+    background-color: #25FF00;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: normal;
+    position: relative;
+}
+
+.passioni-title {
+    font-size: 64px;
+    font-weight: 900;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    background-color: #25FF00;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.passioni-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: -10px;
+    right: -10px;
+    width: calc(100% + 20px);
+    height: 30px;
+    background-color: #25FF00;
+    z-index: -1;
+}
+
+.passione-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.passione-label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+/* Rettangoli verdi per leggibilità su sfondo nero del cane */
+.label-with-bg {
+    background-color: #25FF00;
+    padding: 5px 15px;
+}
+
+/* =================================
+   SEZIONE TERRITORIO
+   ================================= */
+
+.territorio-section {
+    background-color: #25FF00;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.territorio-title {
+    font-size: 64px;
+    font-weight: 900;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.mappa-marche {
+    display: none; /* Non serve più */
+}
+
+.territorio-container {
+    display: none; /* Non serve più */
+}
+
+/* =================================
+   SEZIONE FOTO MARCHE
+   ================================= */
+
+.foto-marche-section {
+    background-color: #FFFFFF;
+}
+
+.foto-marche {
+    width: 100%;
+    height: auto;
+}
+
+.foto-caption {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+    margin-top: 10px;
+}
+
+/* Effetto hover foto Marche */
+.foto-marche-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.foto-marche-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 255, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    
+    /* Nascosto di default */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.foto-marche-item:hover .foto-marche-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.foto-marche-item:hover .foto-marche {
+    opacity: 0.3;
+    transform: scale(1.05);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.foto-marche-description {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+}
+
+/* =================================
+   SEZIONE UNIRSM DESIGN
+   ================================= */
+
+.unirsm-section {
+    background-color: #000000;
+    color: #25FF00;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.unirsm-section .row {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 500px;
+}
+
+.unirsm-img {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.unirsm-text-wrapper {
+    padding: 60px 80px;
+}
+
+.unirsm-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: #25FF00;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.unirsm-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #25FF00;
+}
+
+/* =================================
+   SEZIONE PORTFOLIO
+   ================================= */
+
+.portfolio-section {
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.portfolio-title {
+    font-size: 64px;
+    font-weight: 900;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    position: relative;
+    display: inline-block;
+}
+
+.portfolio-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #000000;
+    z-index: -1;
+}
+
+/* Effetto hover portfolio */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 255, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    
+    /* Nascosto di default */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio-item:hover .portfolio-img {
+    opacity: 0.3;
+    transform: scale(1.05);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.portfolio-description {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #000000;
+    padding: 8px 15px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* =================================
+   FOOTER
+   ================================= */
+
+.footer-section {
+    background-color: #000000;
+    color: #25FF00;
+    text-align: center;
+}
+
+.footer-number {
+    font-size: 48px;
+    font-weight: 900;
+    color: #25FF00;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    word-break: break-all;
+}
+
+.footer-name {
+    font-size: 32px;
+    font-weight: 900;
+    color: #25FF00;
+    text-transform: uppercase;
+}
+
+.footer-contacts {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.footer-link {
+    color: #25FF00;
+    text-decoration: none;
+    font-weight: 700;
+    transition: opacity 0.3s ease;
+}
+
+.footer-link:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+.footer-separator {
+    color: #25FF00;
+    margin: 0 20px;
+    font-weight: 700;
+}
+
+/* =================================
+   BANDE BIANCHE DI SEPARAZIONE
+   ================================= */
+
+.banda-bianca {
+    background-color: #FFFFFF;
+    height: 60px;
+}
+
+/* =================================
+   MEDIA QUERIES
+   ================================= */
+
+/* Tablet e sotto */
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 60px;
+    }
+    
+    .hero-title::after {
+        height: 20px;
+    }
+    
+    .passioni-title,
+    .portfolio-title {
+        font-size: 48px;
+    }
+    
+    .territorio-title {
+        font-size: 48px;
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .unirsm-title {
+        font-size: 36px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+    
+    .hero-title::after {
+        height: 18px;
+    }
+    
+    .passioni-title,
+    .portfolio-title {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+    
+    .territorio-title {
+        font-size: 36px;
+        letter-spacing: -1px;
+    }
+    
+    .unirsm-title {
+        font-size: 28px;
+    }
+    
+    .footer-number {
+        font-size: 32px;
+    }
+    
+    .footer-name {
+        font-size: 24px;
+    }
+    
+    .mobile-nav-wrapper .nav-link {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .passioni-title,
+    .territorio-title,
+    .portfolio-title {
+        font-size: 28px;
+    }
+}
